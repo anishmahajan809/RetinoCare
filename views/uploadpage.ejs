@@ -1,0 +1,53 @@
+
+    <link rel="stylesheet" href="/uploadimage.css">
+    <% layout('/layouts/boilerplate') %>
+
+<section class="container" id="form-container">
+        <div class="imagepreview">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="col-md-6 input">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Name" type="text" name="name">
+                </div>
+                </div>
+                <div class="col-md-6 input">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Age" type="number"name="age">
+                    </div>
+                </div>
+                <div class="col-md-6 input">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Blood Group" type="text"name="bg">
+                    </div>
+                </div>
+                <div class="col-md-6 input">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Patient ID" type="text"name="pid">
+                    </div>
+                </div>
+                <label  for="imagefile" id="choose-image-label" >
+                    <i class="icon-image" id="upload-icon"></i>
+                     Choose a DR-image</label>
+                <input type="file" name="avatar" id="imagefile" class="form-control form-control-sm">
+            
+                <div class="image-preview" id="image-preview">
+                    <img class="image-preview_image" src="" alt="Image preview" >
+                    <br>
+                    <span class="default_text">Preview of the image uploaded</span>
+                </div> 
+                <div class="col-md-12 input">
+                    <div class="form-group">
+                        <input value="Upload" class="btn btn-primary"type="submit" id="image-upload-btn">
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+
+</section>
+    
+
+
+<script src="/uploadimage.js"></script>
+
+

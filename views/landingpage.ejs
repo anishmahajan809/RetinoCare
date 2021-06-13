@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Retino Care</title>
+
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet"> -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="/style.css">
+	<!-- Modernizr JS -->
+	<script src="/modernizr-2.6.2.min.js"></script>
+	</head>
+    <style>
+        body{
+            font-family: 'DM Sans', sans-serif;
+        }
+    </style>
+	<body>
+	
+	
+	<div id="fh5co-page">
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<div class="header-inner">
+				<h1><a href="/index">RetinoCare</a></h1>
+				<nav role="navigation">
+					<ul>
+						
+						<li><a href="/upload" class="nav-link" style="display: none;">Upload</a></li>
+						<li><a href="/patients" class="nav-link" style="display: none;">Patients</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/contact">Contact</a></li>
+						<li class="cta"><a href="/login" id="nav-login">Login</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+	<div class="container">
+		
+	</div>
+	<aside id="fh5co-hero" class="js-fullheight">
+		<div class="flexslider js-fullheight">
+			<ul class="slides">
+		   	<li style="background-image: url(images/Eye4.jpg);">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+		   				<div class="slider-text-inner" style="color: crimson;">
+		   					<h2>Retino Care</h2>
+		   					<p class="login"><a href="/login" class="btn btn-primary btn-lg" >Login</a></p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url(images/Eye3.jpg);">
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+		   				<div class="slider-text-inner">
+		   					<h2>Retino Care</h2>
+		   					<p class="login"><a href="/login" class="btn btn-primary btn-lg" >Login</a></p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		   	
+	</aside>
+
+    <footer id="fh5co-footer" role="contentinfo">
+	
+		<div class="container">
+			<div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+				<h3>About Us</h3>
+				<p>Students at Kle Technological University </p>
+				<p><a href="/contact" class="btn btn-primary btn-outline with-arrow btn-sm">Join Us <i class="icon-arrow-right"></i></a></p>
+		</div>
+	</footer>
+	</div>
+	
+	
+	<!-- jQuery -->
+	<script src="/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="/jquery.flexslider-min.js"></script>
+	
+	<!-- MAIN JS -->
+	<script src="/main.js"></script>
+
+	</body>
+	<script>
+		// const loginbtn = document.getElementById("login");
+		// const login = document.getElementById("login1");
+		const navlogin = document.getElementById("nav-login");
+		const loginbtn = document.getElementsByClassName("login");
+		const navlink = document.getElementsByClassName("nav-link");
+
+
+		if(<%= value %> == 1)
+		{
+			for(var i = 0; i < loginbtn.length; i++){
+				loginbtn[i].style.visibility = "hidden"; // or
+				loginbtn[i].style.display = "none";
+				navlink[i].style.visibility = "visible"; // or
+				navlink[i].style.display = "block"; // or
+				 // depending on what you're doing
+			}
+			// login.style.display = "none";
+			navlogin.textContent = "logout";
+			navlogin.href = "/logout";
+		}
+		
+	</script>
+</html>
+

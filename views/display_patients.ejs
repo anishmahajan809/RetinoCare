@@ -1,0 +1,67 @@
+<% layout('/layouts/boilerplate') %>
+	<div class="fh5co-team fh5co-light-grey-section">
+		<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+						<h2>Registered Patients</h2>
+					</div>
+					<div class="col-md-4 fh5co-staff text-center animate-box">
+						
+                        
+                    <div class="page" style="color: black;">
+                        <section class="container">
+                            <table class="table table-hover" ,align="center">
+                                <div class="clearfix">
+                                    <tbody>
+                                    <thead>
+                                        <tr>
+                                            <th style="text-transform: uppercase;">Patient Id</th>
+                                            <th style="text-transform: uppercase;">Name</th>
+                                            <th style="text-transform: uppercase;">Result</th>
+                                            <th> </th>
+                                        </tr>
+                                    </thead>
+                                    <% for (let patient of data.pat) { %>
+                                        <tr style="font-weight: 800;">
+                                            <td ><%= patient.pid %></td>
+                                            <td style="text-transform: uppercase;"><%= patient.name %></td>
+                                            <td class="pclass"><%= patient.class %></td>
+                                            <td>
+                                            <button type="button" name="view" id="view" class="btn btn-primary float-right"><a style="color: white;" href="/viewpatient/<%= patient.pid %>">View</a></button>
+                                            </td>
+                                        </tr>
+                                    <% } %>
+                                    </tbody>
+                                </div>
+                            </table>
+                                    </div>
+                                    
+                                </div>
+                        </div>
+	            </div>
+    </div>
+
+<script>
+    const pclass = document.getElementsByClassName('pclass')
+    for(var i = 0; i < pclass.length; i++){
+
+        if(pclass[i].textContent  == 0){
+        pclass[i].textContent = 'No DR';
+        }
+        else if(pclass[i].textContent == 1){
+            pclass[i].textContent = 'Mild DR';
+        }
+        else if(pclass[i].textContent == 2){
+            pclass[i].textContent = 'Moderate DR';
+        }
+        else if(pclass[i].textContent == 3){
+            pclass[i].textContent = 'Severe DR';
+        }
+        else if(pclass[i].textContent == 4){
+            pclass[i].textContent = 'Proliferative DR';
+        }
+	}
+    
+</script>
+
+    
